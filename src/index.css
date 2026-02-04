@@ -1,0 +1,139 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* O Mercadinho Design System
+ * Paleta vibrante e profissional para minimercado inteligente 24h
+ */
+
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap');
+
+@layer base {
+  :root {
+    /* Off-white / Cream backgrounds */
+    --background: 47 56% 96%;
+    --foreground: 68 45% 25%;
+
+    /* Card styling - light beige */
+    --card: 47 35% 86%;
+    --card-foreground: 68 45% 25%;
+
+    /* Popover */
+    --popover: 47 56% 96%;
+    --popover-foreground: 68 45% 25%;
+
+    /* Primary - Green principal #636B2F */
+    --primary: 68 40% 30%;
+    --primary-foreground: 47 56% 96%;
+
+    /* Secondary - Green claro #A2A77E */
+    --secondary: 68 21% 58%;
+    --secondary-foreground: 68 45% 25%;
+
+    /* Muted - Bege areia #D8CFA9 */
+    --muted: 47 35% 75%;
+    --muted-foreground: 68 40% 35%;
+
+    /* Accent - Verde destaque */
+    --accent: 75 55% 48%;
+    --accent-foreground: 68 45% 25%;
+
+    /* Destructive */
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 100%;
+
+    /* Border/Input - subtle beige */
+    --border: 47 30% 80%;
+    --input: 47 30% 80%;
+    --ring: 68 40% 30%;
+
+    --radius: 0.75rem;
+
+    /* Custom brand colors */
+    --brand-yellow: 75 55% 48%;
+    --brand-brown: 68 45% 25%;
+    --brand-green: 68 40% 30%;
+    --brand-green-light: 75 45% 55%;
+    --brand-sand: 47 35% 75%;
+    --brand-cream: 47 56% 96%;
+
+    /* Sidebar */
+    --sidebar-background: 47 56% 96%;
+    --sidebar-foreground: 68 45% 25%;
+    --sidebar-primary: 68 40% 30%;
+    --sidebar-primary-foreground: 47 56% 96%;
+    --sidebar-accent: 47 35% 86%;
+    --sidebar-accent-foreground: 68 45% 25%;
+    --sidebar-border: 47 30% 80%;
+    --sidebar-ring: 68 40% 30%;
+  }
+
+  .dark {
+    --background: 27 40% 8%;
+    --foreground: 47 56% 96%;
+
+    --card: 27 35% 12%;
+    --card-foreground: 47 56% 96%;
+
+    --popover: 27 35% 12%;
+    --popover-foreground: 47 56% 96%;
+
+    --primary: 68 40% 45%;
+    --primary-foreground: 27 89% 10%;
+
+    --secondary: 68 21% 35%;
+    --secondary-foreground: 47 56% 96%;
+
+    --muted: 27 25% 20%;
+    --muted-foreground: 47 35% 70%;
+
+    --accent: 42 100% 56%;
+    --accent-foreground: 27 89% 10%;
+
+    --destructive: 0 62% 30%;
+    --destructive-foreground: 0 0% 100%;
+
+    --border: 27 25% 25%;
+    --input: 27 25% 25%;
+    --ring: 68 40% 45%;
+
+    --sidebar-background: 27 40% 8%;
+    --sidebar-foreground: 47 56% 96%;
+    --sidebar-primary: 68 40% 45%;
+    --sidebar-primary-foreground: 27 89% 10%;
+    --sidebar-accent: 27 25% 15%;
+    --sidebar-accent-foreground: 47 56% 96%;
+    --sidebar-border: 27 25% 25%;
+    --sidebar-ring: 68 40% 45%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground font-sans antialiased;
+    font-family: 'Plus Jakarta Sans', sans-serif;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-weight: 700;
+  }
+}
+
+@layer utilities {
+  .text-gradient {
+    @apply bg-clip-text text-transparent bg-gradient-to-r from-primary to-secondary;
+  }
+
+  .section-padding {
+    @apply py-16 md:py-24 px-4 md:px-8;
+  }
+
+  .container-wide {
+    @apply max-w-7xl mx-auto;
+  }
+}
